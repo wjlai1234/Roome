@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bestDeals"
+        type="com.example.roome.hotel.Hotel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:background="?android:selectableItemBackground"
+            android:elevation="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_best_deals"
+                    android:layout_width="@dimen/_110sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/best_deals"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="@{bestDeals.title}"
+                    android:textColor="#252529"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_best_deals"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_state_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="@{String.format(@string/state_country, bestDeals.state,bestDeals.country)}"
+                    android:textColor="#8A8A8F"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_best_deals"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:src="@drawable/ic_pin"
+                    app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+                    app:layout_constraintStart_toStartOf="@+id/ratingBar" />
+
+                <TextView
+                    android:id="@+id/tv_kmToCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="@{@string/km_to_city(bestDeals.distancePerKmToCity.toString())}"
+                    android:textColor="#8A8A8F"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+                <RatingBar
+
+                    android:id="@+id/ratingBar"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:isIndicator="true"
+                    android:layout_marginBottom="-17dp"
+                    android:max="5"
+                    android:progressTint="#54D3C2"
+                    android:rating="3"
+                    android:scaleX=".3"
+                    android:scaleY=".3"
+                    android:stepSize="1"
+                    android:transformPivotX="0dp"
+                    android:transformPivotY="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_state_area" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="@{ @string/price(bestDeals.pricePerNight)}"
+                    android:textColor="#252529"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_perNight"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_perNight" />
+
+                <TextView
+                    android:id="@+id/tv_perNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="/per night"
+                    android:textColor="#252529"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

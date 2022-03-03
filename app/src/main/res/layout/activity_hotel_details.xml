@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="hotelDetails"
+            type="com.example.roome.hotel.Hotel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".hotel.HotelDetailsActivity">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_100sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/best_deals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_like"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="38dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:src="@drawable/ic_left_long"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_details_name"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="@={hotelDetails.title}"
+            android:textColor="#252529"
+            android:textSize="@dimen/_24sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/tv_details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="@{@string/price(hotelDetails.pricePerNight.toString())}"
+            android:textColor="#252529"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_details_name"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_state_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="@{hotelDetails.state}"
+            android:textColor="#8A8A8F"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_details_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_details_name" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_pin"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_state_area"
+            app:layout_constraintStart_toEndOf="@+id/tv_state_area"
+            app:layout_constraintTop_toTopOf="@+id/tv_state_area" />
+
+        <TextView
+            android:id="@+id/tv_kmToCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="@{@string/km_to_city(hotelDetails.distancePerKmToCity.toString())}"
+            android:textColor="#8A8A8F"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/tv_perNight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="/per night"
+            android:textColor="#8A8A8F"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="@+id/tv_details_price"
+            app:layout_constraintStart_toStartOf="@+id/tv_details_price"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

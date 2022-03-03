@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="logo_name">#252529</color>
+    <color name="logo_description">#4B5563</color>
+    <color name="theme_color">#13C5AD</color>
+    <color name="pressed_button">#0B9A87</color>
+    <color name="onboard">#252529</color>
+    <color name="onboard_description">#8A8A8F</color>
+    <color name="unselected_dot">#F6F6F6</color>
+    <color name="selected_dot">#54D3C2</color>
+    <color name="header">#252529</color>
+    <color name="chosen_header_bg_color">#54D3C2</color>
+</resources>

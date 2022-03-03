@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Roome</string>
+    <string name="menu_offer">Offer</string>
+    <string name="menu_trips">Cart</string>
+    <string name="menu_explore">Explore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_description">Best hotel deals for your holiday</string>
+    <string name="logo_title">Roome</string>
+    <string name="splash_button">Get started</string>
+    <string name="splash_sign_in_txt">Already have account? Log in</string>
+    <string name="plan_your_trips">Plan your trips</string>
+    <string name="onboard_description">Book one of our unique hotel to escape the ordinary</string>
+    <string name="log_in">Log in</string>
+    <string name="create_account">Create account</string>
+    <string name="search_hotels">Search Hotels</string>
+    <string name="_1_room_2_adults">%s Room - %s Adults</string>
+    <string name="_12_dec_22_dec">%s Dec - %s Dec</string>
+    <string name="number_of_rooms">Number of Rooms</string>
+    <string name="choose_date">Choose date</string>
+    <string name="km_to_city">%s km to city</string>
+    <string name="price">RM %s</string>
+    <string name="state_country">%s, %s</string>
+    <string name="generic_text">My Name is %1$s %2$s</string>
+
+</resources>
