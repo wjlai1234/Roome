@@ -3,12 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/hotelFragment">
+    app:startDestination="@id/nav_hotel">
 
     <fragment
-        android:id="@+id/hotelFragment"
+        android:id="@+id/nav_hotel"
         android:name="com.example.roome.hotel.HotelFragment"
         android:label="hotelFragment"
         tools:layout="@layout/hotel_fragment">
+        <action
+            android:id="@+id/action_nav_hotel_to_profileFragment"
+            app:destination="@id/nav_profile"
+            app:popUpTo="@id/nav_profile"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_hotel_to_nav_trips"
+            app:destination="@id/nav_trips"
+            app:popUpTo="@id/nav_trips"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_hotel_to_nav_explore"
+            app:destination="@id/nav_explore"
+            app:popUpTo="@id/nav_explore"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.roome.user.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_profileDetailsActivity"
+            app:destination="@id/profileDetailsActivity"
+            app:popUpTo="@id/profileDetailsActivity"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_nav_profile_to_splashActivity"
+            app:destination="@id/splashActivity"
+            app:popUpTo="@id/splashActivity"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_trips"
+        android:name="com.example.roome.TripsFragment"
+        android:label="fragment_trips"
+        tools:layout="@layout/fragment_trips" />
+    <activity
+        android:id="@+id/nav_explore"
+        android:name="com.example.roome.hotel.HotelExploreActivity"
+        android:label="exploreFragment"
+        tools:layout="@layout/activity_explore_hotel">
+
+    </activity>
+    <activity
+        android:id="@+id/profileDetailsActivity"
+        android:name="com.example.roome.user.ProfileDetailsActivity"
+        android:label="ProfileDetailsActivity"
+        tools:layout="@layout/activity_profile_details"/>
+    <activity
+        android:id="@+id/splashActivity"
+        android:name="com.example.roome.splash.SplashActivity"
+        android:label="SplashActivity"
+        tools:layout="@layout/splash_activity"/>
 </navigation>

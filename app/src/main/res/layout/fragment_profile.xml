@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="profileData"
+            type="com.example.roome.user.ProfileFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Cayden"
+            android:textColor="#252529"
+            android:elevation="@dimen/_2sdp"
+            android:textSize="@dimen/_28sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/_12sdp"
+            android:elevation="@dimen/_2sdp"
+            android:text="View and edit profile"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_password"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableRight="@drawable/ic_lock"
+            android:drawablePadding="@dimen/_15sdp"
+            android:padding="@dimen/_15sdp"
+            android:text="Change Password"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="#252529"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_picture" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profile_logout"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:drawableRight="@drawable/ic_exit"
+            android:drawablePadding="@dimen/_15sdp"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/_15sdp"
+            android:text="Log Out"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#252529"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_password" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btn_to_details"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

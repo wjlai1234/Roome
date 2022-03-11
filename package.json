@@ -1,0 +1,23 @@
+{
+  "name": "Roome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjlai1234/Roome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjlai1234/Roome/issues"
+  },
+  "homepage": "https://github.com/wjlai1234/Roome#readme",
+  "dependencies": {
+    "webdriverio": "^7.17.4"
+  }
+}

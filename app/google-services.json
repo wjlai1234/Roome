@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258931703860",
+    "project_id": "roome-40ce1",
+    "storage_bucket": "roome-40ce1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258931703860:android:06e88f0dbe695335140a61",
+        "android_client_info": {
+          "package_name": "com.example.roome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258931703860-h6oc4hqra0ads9icdkjvk3cvd81vduk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB44RdFfbk2iQo0j-ucAn7h6vKqkyvIWq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258931703860-h6oc4hqra0ads9icdkjvk3cvd81vduk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -23,8 +23,7 @@ data class Hotel(var id: String?, var title: String?, var imgPath: String?, var 
         parcel.readInt(),
         parcel.readInt(),
         parcel.readInt()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
@@ -60,7 +59,6 @@ data class Hotel(var id: String?, var title: String?, var imgPath: String?, var 
             field = value
             notifyPropertyChanged(BR.hotelImage)
         }
-
-
 }
+
 

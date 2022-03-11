@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Roome</string>
-    <string name="menu_offer">Offer</string>
-    <string name="menu_trips">Cart</string>
-    <string name="menu_explore">Explore</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_trips">Trips</string>
+    <string name="menu_explore">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo_description">Best hotel deals for your holiday</string>
@@ -14,13 +14,23 @@
     <string name="log_in">Log in</string>
     <string name="create_account">Create account</string>
     <string name="search_hotels">Search Hotels</string>
-    <string name="_1_room_2_adults">%s Room - %s Adults</string>
-    <string name="_12_dec_22_dec">%s Dec - %s Dec</string>
+    <string name="room">5 Room</string>
+    <string name="room_adult">%s Room - %s Adults</string>
+    <string name="start_date_and_end_date">%s Dec - %s Dec</string>
+    <string name="adult">3 Adults</string>
+    <string name="start_Date">15 Mac</string>
+    <string name="end_Date">30 Mac</string>
     <string name="number_of_rooms">Number of Rooms</string>
     <string name="choose_date">Choose date</string>
     <string name="km_to_city">%s km to city</string>
     <string name="price">RM %s</string>
     <string name="state_country">%s, %s</string>
     <string name="generic_text">My Name is %1$s %2$s</string>
+    <string name="explore">Explore</string>
+
+
+    <string name="facebook_client_token">23ebd3040c1bb046fffd6b2c4754d686</string>
+    <string name="facebook_app_id">713656699631338</string>
+    <string name="fb_login_protocol_scheme">fb713656699631338</string>
 
 </resources>

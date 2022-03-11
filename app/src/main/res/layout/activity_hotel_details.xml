@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_100sdp"
             android:scaleType="centerCrop"
-            android:src="@drawable/best_deals"
+            android:src="@{hotelDetails.imgPath}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,7 +29,7 @@
             android:id="@+id/imageView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:src="@drawable/ic_like"
             app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="38dp"
+            android:layout_marginTop="20dp"
             android:scaleX="2"
             android:scaleY="2"
             android:src="@drawable/ic_left_long"
@@ -118,5 +118,199 @@
             app:layout_constraintEnd_toEndOf="@+id/tv_details_price"
             app:layout_constraintStart_toStartOf="@+id/tv_details_price"
             app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="391dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/tv_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Summary"
+            android:textColor="#8A8A8F"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@+id/divider3"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <TextView
+            android:id="@+id/tv_summary_text"
+            android:layout_width="@dimen/_275sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="Featuring a fitness center, Grand Royale Park Hotel is located in Sweden, 4.7 km from National Museum…"
+            android:textColor="#252529"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_summary"
+            app:layout_constraintTop_toBottomOf="@+id/tv_summary" />
+
+        <TextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="9.2"
+            android:textColor="#54D3C2"
+            android:textSize="@dimen/_36sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_summary"
+            app:layout_constraintTop_toBottomOf="@+id/tv_summary_text" />
+
+        <TextView
+            android:id="@+id/tv_overall_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Overall Rating"
+            android:textColor="#252529"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toEndOf="@+id/tv_rating"
+            app:layout_constraintTop_toTopOf="@+id/tv_rating" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_marginTop="8dp"
+            android:isIndicator="true"
+            android:max="5"
+            android:progressTint="#54D3C2"
+            android:rating="3"
+            android:scaleX=".3"
+            android:scaleY=".3"
+            android:stepSize="1"
+            android:transformPivotX="0dp"
+            android:transformPivotY="0dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_overall_rating"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overall_rating" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Room"
+            android:textColor="#252529"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rating"
+            app:layout_constraintStart_toStartOf="@+id/tv_rating"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rating" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:max="100"
+            android:progress="20"
+            android:src="@drawable/get_start_button"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_room"
+            app:layout_constraintStart_toEndOf="@+id/tv_room"
+            app:layout_constraintTop_toTopOf="@+id/tv_room" />
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto"
+            android:text="Service"
+            android:textColor="#252529"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_room"
+            app:layout_constraintTop_toBottomOf="@+id/tv_room" />
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:max="100"
+            android:progress="80"
+            android:src="@drawable/get_start_button"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_service"
+            app:layout_constraintStart_toEndOf="@+id/tv_service"
+            app:layout_constraintTop_toTopOf="@+id/tv_service" />
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Location"
+            android:textColor="#252529"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_service"
+            app:layout_constraintStart_toStartOf="@+id/tv_service"
+            app:layout_constraintTop_toBottomOf="@+id/tv_service" />
+
+        <ProgressBar
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:max="100"
+            android:progress="50"
+            android:src="@drawable/get_start_button"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_location"
+            app:layout_constraintStart_toEndOf="@+id/tv_location"
+            app:layout_constraintTop_toTopOf="@+id/tv_location" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="Price"
+            android:textColor="#252529"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_location"
+            app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@color/white"
+            android:max="100"
+            android:progress="70"
+            android:src="@drawable/get_start_button"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+            app:layout_constraintStart_toEndOf="@+id/tv_price"
+            app:layout_constraintTop_toTopOf="@+id/tv_price" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_book"
+            android:layout_width="@dimen/_260sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/get_start_button"
+            android:fontFamily="@font/roboto"
+            android:padding="@dimen/_7sdp"
+            android:text="Book now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_summary_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_summary_text"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

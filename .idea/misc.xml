@@ -4,29 +4,53 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/button.xml" value="0.32747747747747746" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/button_google_pressed.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/button_unpressed.xml" value="0.285" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/custom_group_ic.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/custom_message_ic.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/custom_password_ic.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/dialog_bg.xml" value="0.14" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/get_start_button.xml" value="0.32747747747747746" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/get_start_button_pressed.xml" value="0.32747747747747746" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/get_start_button_unpressed.xml" value="0.32747747747747746" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_avator.xml" value="0.1425" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_facebook.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_google.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_group.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_left_long.xml" value="0.2555" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_message.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/ic_password_focused.xml" value="0.189" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/search_btn_bg.xml" value="0.1175" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/search_view_background.xml" value="0.352" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/selected.xml" value="0.32747747747747746" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/drawable/unselected.xml" value="0.32747747747747746" />
-        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_hotel_details.xml" value="0.22" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_acc.xml" value="0.32222222222222224" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_hotel_details.xml" value="0.25" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_main2.xml" value="0.21621621621621623" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_number_of_room.xml" value="0.25" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_profile_details.xml" value="0.16527777777777777" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/activity_splash.xml" value="0.31351351351351353" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/explore_fragment.xml" value="0.18" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_explore_hotel.xml" value="0.25" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_login.xml" value="0.31351351351351353" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_onboarding.xml" value="0.31351351351351353" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_signup.xml" value="0.31351351351351353" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/fragment_trips.xml" value="0.32222222222222224" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/home.xml" value="0.22" />
-        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/hotel_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/hotel_fragment.xml" value="0.21" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/onboard_activity.xml" value="0.18" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/onboard_fragment.xml" value="0.21621621621621623" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/recycler_item_best_deals.xml" value="0.25" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/recycler_item_last_search.xml" value="0.5" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/recycler_item_popular_destinations.xml" value="0.31351351351351353" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/recycler_item_search_by_result.xml" value="0.22" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/recycler_view_item.xml" value="0.33" />
+        <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/room_adult_dialog_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/search_fragment.xml" value="0.31351351351351353" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/slide_screen.xml" value="0.2" />
         <entry key="..\:/Users/Cayden Lai/AndroidStudioProjects/Roome/app/src/main/res/layout/splash_activity.xml" value="0.31351351351351353" />
