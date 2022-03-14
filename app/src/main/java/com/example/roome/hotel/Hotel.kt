@@ -8,8 +8,20 @@ import androidx.databinding.Bindable
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.example.roome.BR
-
-data class Hotel(var id: String?, var title: String?, var imgPath: String?, var state: String?, var country: String?, var distancePerKmToCity: Double?, var rating: Int?, var pricePerNight: Int?, var room: Int?, var adult: Int?, var startDate: Int?, var endDate: Int?) : Parcelable, BaseObservable() {
+data class Hotel(
+    var id: String? = null,
+    var title: String? = null,
+    var imgPath: String? = null,
+    var state: String? = null,
+    var country: String? = null,
+    var distancePerKmToCity: Double? = null,
+    var rating: Int? = null,
+    var pricePerNight: Int? = null,
+    var room: Int? = null,
+    var adult: Int? = null,
+    var startDate: Int? = null,
+    var endDate: Int? = null
+) : Parcelable, BaseObservable() {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -53,6 +65,7 @@ data class Hotel(var id: String?, var title: String?, var imgPath: String?, var 
             return arrayOfNulls(size)
         }
     }
+
     @get:Bindable
     var hotelImage: String = ""
         set(value) {

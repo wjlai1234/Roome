@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="bestDeals"
-        type="com.example.roome.hotel.Hotel" />
+            type="com.example.roome.hotel.Hotel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,13 +17,13 @@
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_280sdp"
             android:layout_height="@dimen/_90sdp"
-            android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_3sdp"
             android:layout_marginBottom="@dimen/_8sdp"
             android:background="?android:selectableItemBackground"
             android:elevation="@dimen/_10sdp"
             app:cardCornerRadius="@dimen/_11sdp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -35,6 +36,8 @@
                     android:layout_width="@dimen/_110sdp"
                     android:layout_height="match_parent"
                     android:src="@{bestDeals.imgPath}"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,8 +58,8 @@
                     android:id="@+id/tv_state_area"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_3sdp"
                     android:layout_marginStart="10dp"
+                    android:layout_marginTop="@dimen/_3sdp"
                     android:fontFamily="@font/roboto_slab_bold"
                     android:text="@{String.format(@string/state_country, bestDeals.state,bestDeals.country)}"
                     android:textColor="#8A8A8F"
@@ -91,8 +94,8 @@
                     android:id="@+id/ratingBar"
                     android:layout_width="@dimen/_180sdp"
                     android:layout_height="@dimen/_34sdp"
-                    android:isIndicator="true"
                     android:layout_marginBottom="-17dp"
+                    android:isIndicator="true"
                     android:max="5"
                     android:progressTint="#54D3C2"
                     android:rating="3"

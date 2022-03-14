@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="hotelList"
-            type="com.example.roome.hotel.viewmodel.HotelViewModel" />
+            name="searchResult"
+            type="com.example.roome.hotel.Book" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <androidx.appcompat.widget.SearchView
+                     <androidx.appcompat.widget.SearchView
                         android:id="@+id/ti_search"
                         android:layout_width="@dimen/_240sdp"
                         android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="@string/start_Date"
+                        android:text="@{searchResult.startDate.toString()}"
                         android:textColor="#252529"
                         app:layout_constraintStart_toStartOf="@+id/textView4"
                         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -148,7 +148,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="@string/end_Date"
+                        android:text="@{searchResult.endDate.toString()}"
                         android:textColor="#252529"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_date_dash"
                         app:layout_constraintStart_toEndOf="@+id/tv_date_dash"
@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_4sdp"
-                        android:text="@string/room"
+                        android:text="@{@string/room(searchResult.room.toString())}"
                         android:textColor="#252529"
                         app:layout_constraintStart_toStartOf="@+id/textView6"
                         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -190,7 +190,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:text="@string/adult"
+                        android:text="@{@string/adult(searchResult.adult.toString())}"
                         android:textColor="#252529"
                         app:layout_constraintBottom_toBottomOf="@+id/tv_room"
                         app:layout_constraintStart_toEndOf="@+id/tv_adult_dash"

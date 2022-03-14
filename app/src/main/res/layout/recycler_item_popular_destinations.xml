@@ -6,7 +6,7 @@
     <data>
         <variable
             name="popularDestination"
-            type="com.example.roome.hotel.Hotel" />
+            type="com.example.roome.hotel.PopularArea" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -35,6 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@{popularDestination.imgPath}"
+                    android:scaleType="centerCrop"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -46,7 +47,7 @@
                     android:layout_marginStart="@dimen/_11sdp"
                     android:layout_marginBottom="@dimen/_11sdp"
                     android:fontFamily="@font/roboto_slab_bold"
-                    android:text="Hawaii"
+                    android:text="@{popularDestination.country}"
                     android:textColor="#FFFFFF"
                     android:textSize="@dimen/_20sdp"
                     app:layout_constraintBottom_toBottomOf="parent"

@@ -14,10 +14,10 @@
     <string name="log_in">Log in</string>
     <string name="create_account">Create account</string>
     <string name="search_hotels">Search Hotels</string>
-    <string name="room">5 Room</string>
+    <string name="room">%s Room</string>
     <string name="room_adult">%s Room - %s Adults</string>
     <string name="start_date_and_end_date">%s Dec - %s Dec</string>
-    <string name="adult">3 Adults</string>
+    <string name="adult">%s Adults</string>
     <string name="start_Date">15 Mac</string>
     <string name="end_Date">30 Mac</string>
     <string name="number_of_rooms">Number of Rooms</string>

@@ -10,24 +10,24 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.roome.R
 import com.example.roome.databinding.HotelFragmentBinding
 import com.example.roome.databinding.RoomAdultDialogFragmentBinding
-import com.example.roome.hotel.adapter.HotelBestDealAdapter
-import com.example.roome.hotel.adapter.HotelLastSearchAdapter
-import com.example.roome.hotel.adapter.HotelPopularDestinationsAdapter
 import com.example.roome.hotel.viewmodel.BookViewModel
 import com.example.roome.hotel.viewmodel.HotelViewModel
 import com.google.android.material.datepicker.CalendarConstraints
 import com.google.android.material.datepicker.MaterialDatePicker
+import com.google.firebase.auth.FirebaseAuth
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class HotelFragment : Fragment() {
@@ -36,19 +36,21 @@ class HotelFragment : Fragment() {
     private lateinit var roomAdultChildBinding: RoomAdultDialogFragmentBinding
     private val hotelViewModel by lazy { ViewModelProvider(this).get(HotelViewModel::class.java) }
     private val bookViewModel by lazy { ViewModelProvider(this).get(BookViewModel::class.java) }
-
-
-
+    private lateinit var auth: FirebaseAuth
+    var bookList: Book = Book()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
+
         hotelBinding = DataBindingUtil.inflate(
             layoutInflater,
             R.layout.hotel_fragment,
             container,
             false
         )
+
         roomAdultChildBinding = DataBindingUtil.inflate(
             LayoutInflater.from(
                 context
@@ -56,54 +58,61 @@ class HotelFragment : Fragment() {
         )
 
 
-
         bookViewModel.apply {
             room.observe(viewLifecycleOwner) { room ->
                 roomAdultChildBinding.tvNumberOfRoom.text = room.toString()
-                hotelBinding.tvRoom.text = if(room <= 1)  String.format("%s Room",room.toString()) else String.format("%s Rooms",room.toString())
+                hotelBinding.tvRoom.text = if (room <= 1) String.format(
+                    "%s Room",
+                    room.toString()
+                ) else String.format("%s Rooms", room.toString())
+                bookList.room = room.toInt()
             }
             adult.observe(viewLifecycleOwner) { adult ->
                 roomAdultChildBinding.tvNumberOfAdult.text = adult.toString()
-                hotelBinding.tvAdult.text = if(adult <= 1)  String.format("%s Adult",adult.toString()) else String.format("%s Adults",adult.toString())
+                hotelBinding.tvAdult.text = if (adult <= 1) String.format(
+                    "%s Adult",
+                    adult.toString()
+                ) else String.format("%s Adults", adult.toString())
+                bookList.adult = adult.toInt()
             }
             children.observe(viewLifecycleOwner) { children ->
                 roomAdultChildBinding.tvNumberOfChild.text = children.toString()
+                bookList.child = children
             }
+
             endDate.observe(viewLifecycleOwner) { endDate ->
                 hotelBinding.tvEndDate.text = endDate.toString()
+                bookList.endDate = endDate
             }
             startDate.observe(viewLifecycleOwner) { startDate ->
                 hotelBinding.tvStartDate.text = startDate.toString()
+                bookList.startDate = startDate
             }
         }
 
         hotelBinding.apply {
-            rvBestDeals.apply {
-                layoutManager =
-                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                adapter = HotelBestDealAdapter(allHotelsList)
-            }
-            rvLastSearch.apply {
-                layoutManager =
-                    LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
-                adapter = HotelLastSearchAdapter(allHotelsList)
-            }
-            rvPopularDestination.apply {
-                layoutManager =
-                    LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
-                adapter = HotelPopularDestinationsAdapter(allHotelsList)
-            }
-            cvChooseDateTouchArea.setOnClickListener { setupRangePickerDialog() }
+            hotelViewModel.loadData(this, requireActivity(), viewLifecycleOwner)
 
+            tiSearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+                androidx.appcompat.widget.SearchView.OnQueryTextListener {
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    bookViewModel.searchText.value = newText?.lowercase()
+                    bookList.searchText = newText?.lowercase()
+                    return false
+                }
+
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return false
+                }
+            })
+            cvChooseDateTouchArea.setOnClickListener { setupRangePickerDialog() }
 
             val builder = AlertDialog.Builder(requireActivity())
             builder.setView(roomAdultChildBinding.root)
             var dialog = builder.create()
-
             cvChooseNumOfRoomTouchArea.setOnClickListener {
                 dialog.show()
                 dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
                 roomAdultChildBinding.apply {
                     book = bookViewModel
                     btnApply.setOnClickListener {
@@ -113,7 +122,6 @@ class HotelFragment : Fragment() {
                 }
             }
         }
-
         return hotelBinding.root
     }
 
@@ -121,8 +129,21 @@ class HotelFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
+        hotelBinding.btnSearch.setOnClickListener {
+            hotelBinding.apply {
+                if (bookList.searchText?.isNotEmpty() == true && bookList.room != 0 && bookList.startDate?.isNotEmpty() == true && bookList.endDate?.isNotEmpty() == true) {
+                    val action = HotelFragmentDirections.actionNavHotelToNavExplore(bookList)
+                    navController.navigate(action)
+                } else {
+                    Toast.makeText(
+                        requireActivity(),
+                        "Pls select all data, cannot be empty",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+        }
 
-        hotelBinding.btnSearch.setOnClickListener { navController.navigate(R.id.action_nav_hotel_to_nav_explore) }
     }
 
     private fun setupRangePickerDialog() {

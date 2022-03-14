@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TripsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".TripsFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:text="My Trips"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#252529"
+            android:textSize="@dimen/_19sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_popular_destination"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_500sdp"
+            android:layout_marginTop="16dp"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            tools:itemCount="3"
+            tools:listitem="@layout/recycler_item_search_by_result" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:layout_width="@dimen/_280sdp"-->
+    <!--            android:layout_height="@dimen/_40sdp"-->
+    <!--            android:layout_marginTop="16dp"-->
+    <!--            android:background="#F6F6F6"-->
+    <!--            app:cardBackgroundColor="#F6F6F6"-->
+    <!--            app:cardCornerRadius="@dimen/_15sdp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/textView8" />-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_upcoming"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:fontFamily="@font/roboto_slab_bold"-->
+    <!--                android:text="My Trips"-->
+    <!--                android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+    <!--                android:textColor="#252529"-->
+    <!--                android:textSize="@dimen/_19sdp"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tvFavourite"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginStart="16dp"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:fontFamily="@font/roboto_slab_bold"-->
+    <!--                android:text="My Trips"-->
+    <!--                android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+    <!--                android:textColor="#252529"-->
+    <!--                android:textSize="@dimen/_19sdp"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->

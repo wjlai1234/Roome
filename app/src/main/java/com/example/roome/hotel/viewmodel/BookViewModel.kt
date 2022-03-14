@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModel
 class BookViewModel : ViewModel(){
     var startDate = MutableLiveData<String>()
     var endDate = MutableLiveData<String>()
-
+    var searchText = MutableLiveData<String>()
     private var _room  =  MutableLiveData<Int>(0) //allow editable in VM,
     val room: LiveData<Int> //
         get() = _room

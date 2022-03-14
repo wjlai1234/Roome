@@ -7,19 +7,19 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.roome.hotel.HotelPopularActivity
 import com.example.roome.databinding.RecyclerItemPopularDestinationsBinding
-import com.example.roome.hotel.Hotel
-import com.example.roome.hotel.HotelDetailsActivity
+import com.example.roome.hotel.PopularArea
 
-class HotelPopularDestinationsAdapter(private val hotelList: ArrayList<Hotel>) :
+class HotelPopularDestinationsAdapter(private val popularAreaList: ArrayList<PopularArea>) :
     RecyclerView.Adapter<HotelPopularDestinationsAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: RecyclerItemPopularDestinationsBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(hotel: Hotel, viewHolder: ViewHolder) {
-            binding.popularDestination= hotel
+        fun bind(popularArea: PopularArea, viewHolder: ViewHolder) {
+            binding.popularDestination= popularArea
             binding.ivPopularDestination.setOnClickListener {
-                val intent = Intent(viewHolder.itemView.context, HotelDetailsActivity::class.java)
-                intent.putExtra("object", hotel)
+                val intent = Intent(viewHolder.itemView.context, HotelPopularActivity::class.java)
+                intent.putExtra("object", popularArea)
                 viewHolder.itemView.context.startActivity(intent)
             }
         }
@@ -31,8 +31,8 @@ class HotelPopularDestinationsAdapter(private val hotelList: ArrayList<Hotel>) :
 
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) = viewHolder.bind(hotelList[position],viewHolder)
-    override fun getItemCount() = hotelList.size
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) = viewHolder.bind(popularAreaList[position],viewHolder)
+    override fun getItemCount() = popularAreaList.size
 
 
 
